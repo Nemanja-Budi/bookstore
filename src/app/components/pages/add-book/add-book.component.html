@@ -1,0 +1,38 @@
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()" class="grid grid-rows-1 px-2 w-[70%] mx-auto">
+    <div class="flex flex-col">
+        <label for="ISBN" class="text-lg">ISBN</label>
+        <input class="col-span-5 border-2 p-2 rounded-md" type="text" id="name" formControlName="ISBN" required
+            autocomplete="off">
+    </div>
+
+    <div class="flex flex-col">
+        <label for="title" class="text-lg">Title</label>
+        <input class="col-span-5 border-2 p-2 rounded-md" type="text" id="country" formControlName="title" required
+            autocomplete="off">
+    </div>
+
+    <div class="flex flex-col">
+        <label for="author" class="text-lg">Author</label>
+        <input class="col-span-5 border-2 p-2 rounded-md" rows="3" id="author" formControlName="author" required
+            autocomplete="off">
+    </div>
+
+    <div class="flex flex-col ">
+        <label for="yearOfPublication" class="text-lg">Year of Publication</label>
+        <input class="col-span-5 border-2 p-2 rounded-md" type="number" id="yearOfPublication"
+            formControlName="yearOfPublication" required autocomplete="off">
+    </div>
+
+    <div class="flex flex-col">
+        <label for="publisher" class="text-lg">Publisher</label>
+        <input class="col-span-5 border-2 p-2 rounded-md" rows="3" id="publisher" formControlName="publisher" required
+            autocomplete="off">
+    </div>
+
+
+    <div class="flex py-4">
+        <button [disabled]="!bookForm.valid" [ngStyle]="{'background-color':  !bookForm.valid ? '#5593f7' : '#156bf4' }"
+            class=" text-white px-5 py-2 rounded-md" type="submit">{{editingMode == true ? 'Edit' :
+            'Submit'}}</button>
+    </div>
+</form>

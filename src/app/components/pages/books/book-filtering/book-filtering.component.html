@@ -1,0 +1,16 @@
+<div class="grid grid-cols-2 p-2 items-center">
+    <div class="grid grid-cols-4">
+        <input class="col-span-3 border border-slate-200 rounded-md p-1" type="text" #searchText placeholder="search">
+        <button (click)="onGetSearchTekst(searchText.value)">Search</button>
+    </div>
+    <div class="grid grid-cols-2">
+        <div>
+            <input type="radio" checked name="radioChacked" (change)="getRadioValue('title')">
+            <label for="title">Title</label>
+        </div>
+        <div>
+            <input type="radio" name="radioChacked" (change)="getRadioValue('author')">
+            <label for="author">Author</label>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="grid grid-rows-[auto,1fr,auto] h-full">
+    <div class="px-3">
+        <app-book-filtering></app-book-filtering>
+    </div>
+    <div class="grid grid-cols-2 gap-x-10 p-5">
+        <app-book-item class="border-2 border-slate-200 rounded-md p-2" *ngFor="let book of books | async"
+            [book]="book"></app-book-item>
+    </div>
+    <div class="flex justify-center">
+        <button (click)="onLoadMore()">Load more</button>
+    </div>
+</div>

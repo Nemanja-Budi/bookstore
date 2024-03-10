@@ -1,0 +1,10 @@
+<div class="border border-slate-200 p-7">
+    <h2 class="font-bold text-lg">{{review.title}}</h2>
+    <p>{{review.profileName}} - {{review.time}}</p>
+    <p>ISBN: {{review.text}}</p>
+
+    <ul class="flex gap-3">
+        <li class="border-b-blue-500 border-b"><a (click)="onDeleteReview(review._id)"
+                class="text-blue-500 cursor-pointer">Delete</a></li>
+    </ul>
+</div>

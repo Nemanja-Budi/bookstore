@@ -1,0 +1,14 @@
+<div>
+    <h2 class="font-bold text-xl">{{book.title}}</h2>
+    <p>{{book.author}}</p>
+    <p>ISBN: {{book.ISBN}}</p>
+    <p>Year: {{book.yearOfPublication}}</p>
+    <p>publisher: {{book.publisher}}</p>
+    <ul class="flex gap-3">
+        <li *ngIf="!isDetails" class="border-b-blue-500 border-b"><a class="text-blue-500"
+                routerLink="/books/{{book._id}}">Details</a>
+        </li>
+        <li class="border-b-blue-500 border-b"><a class="text-blue-500" routerLink="/edit-book/{{book._id}}">Edit</a>
+        </li>
+    </ul>
+</div>
